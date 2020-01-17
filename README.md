@@ -11,3 +11,20 @@ This is to access a zipped version of node-sass-bindings. Otherwise downloading 
 ```
 npm i node-sass@4.13.1 --save
 ```
+or 
+```
+npm run rebuild node-sass
+```
+
+# If this is still a problem - an alternative is using create-react-app - then ejecting and copying the node_modules folder into your project or in global roaming space 
+```
+npx create-react-app myproject --use-npm
+npm run eject 
+```
+
+# copy myproject/node_modules/node-sass into your project folder node_modules  - or copy it globally into - 
+- ( if you can't see AppData - turn on hidden files in folder view settings of file explorer )
+- C:\Users\[your user]\AppData\Roaming\npm\node_modules
+
+
+
