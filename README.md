@@ -1,13 +1,21 @@
-# node-sass-bindings
-This is to access a zipped version of node-sass-bindings. Otherwise downloading binding files over corporate proxy can be blocked.
-you can end up with node-gyp downloading and caching a corrupted version of the binding file - ie it looks like some xml file with errors at about 2mb
-the actual files are about 2.4mb.
+# How to fix node-gyp errors when installing node-sass over a corporate proxy
+The problem is caused often due to an attempt to dynamically download the node-sass binding files over the network, but in doing so it cannot access the node-binding file and instead you end up with a corrupted file. It's deceptive because the file download is very similar in size to the true binding file at about 2mb but the actual files are about 2.4mb. You can even try to access this file yourself by going to the web browser and clicking to download it, but you will see instead an xml file which is not the binding file.
 
-# references to install over corporate proxy
-- https://github.com/sass/node-sass/issues/2133
+# Using this repo node-sass binding files?
+You can use this repo as an example, but you may have a different operating system so may need to follow a similar example but download the binding files you need instead.
+Which binding files do you need? Look at your errors:
+> Download Binary from .... /v4.13.0/win32-x64-67\binding.node
+> Binary saved to .... C:\Users\[your name]\AppData\Roaming\npm-cache\node-sass\4.13.1\win32-x64-67_binding.node
+> Binary has a problem: Error ... win32-x64-67\binding.node
 
-# unzip files and place relative to your npm cache file like this
+# Delete any existing created node-sass folder that may have already been corrupted:
+> C:\Users\[your name]\AppData\Roaming\npm\node-sass files...
+> C:\Users\[your name]\AppData\Roaming\npm\node_modules/node-sass
+
+# Download and unzip files from either this repo or your own created repo and place relative to your npm cache file like this
 - C:\Users\[your name]\AppData\Roaming\npm-cache\node-sass\4.13.1\win32-x64-67_binding.node
+- Be sure to use the same folder directory as your error has stated above.
+ie 4.13.1 as in this example. Yours maybe different.
 
 # npm install globally first to see the install work first.
 ```
@@ -51,3 +59,8 @@ npm i node-sass@4.13.1 -D
 npx create-react-app myproject --use-npm
 npm run eject
 ```
+
+
+
+# Useful references to install over corporate proxy
+- https://github.com/sass/node-sass/issues/2133
