@@ -4,13 +4,14 @@ The problem is caused often due to an attempt to dynamically download the node-s
 # Using this repo node-sass binding files?
 You can use this repo as an example, but you may have a different operating system so may need to follow a similar example but download the binding files you need instead.
 Which binding files do you need? Look at your errors:
-> Download Binary from .... /v4.13.0/win32-x64-67\binding.node
-> Binary saved to .... C:\Users\[your name]\AppData\Roaming\npm-cache\node-sass\4.13.1\win32-x64-67_binding.node
-> Binary has a problem: Error ... win32-x64-67\binding.node
+
+- Download Binary from .... /v4.13.0/win32-x64-67\binding.node
+- Binary saved to .... C:\Users\[your name]\AppData\Roaming\npm-cache\node-sass\4.13.1\win32-x64-67_binding.node
+- Binary has a problem: Error ... win32-x64-67\binding.node
 
 # Delete any existing created node-sass folder that may have already been corrupted:
-> C:\Users\[your name]\AppData\Roaming\npm\node-sass files...
-> C:\Users\[your name]\AppData\Roaming\npm\node_modules/node-sass
+- C:\Users\[your name]\AppData\Roaming\npm\node-sass files...
+- C:\Users\[your name]\AppData\Roaming\npm\node_modules/node-sass
 
 # Download and unzip files from either this repo or your own created repo and place relative to your npm cache file like this
 - C:\Users\[your name]\AppData\Roaming\npm-cache\node-sass\4.13.1\win32-x64-67_binding.node
