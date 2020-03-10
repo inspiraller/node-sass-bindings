@@ -41,6 +41,10 @@ npm i node-sass@4.13.1 -g
 ```
 This should work.
 
+# Now if you want to install node-sass specific to your project, just install node-sass relative to your project  and it should use the global version
+```
+npm i node-sass@4.13.1 -D
+```
 
 # Worse case scenario - If this is still a problem - an alternative is using create-react-app - then ejecting and copying the node_modules folder into your project or in global roaming space
 ```
